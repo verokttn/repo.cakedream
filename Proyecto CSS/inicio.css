@@ -10,50 +10,51 @@
     --color-1: rgba(255,107,161,255);
     --color-2: rgba(208, 20, 114);
     --color-3: rgba(43, 38, 38);
-    --degradado: linear-gradient( to bottom left rgba(255,107,161,255), white )
+    --degradado: linear-gradient( to bottom left rgba(255,107,161,255), white );
     --tipografia-1: Mukta;
     --tipografia-2: 'Times New Roman', Times, serif;
     --tipografia-3: Madimi One;
+    --tipografiadancing: font-family: "Dancing Script", cursive;
 
 }
 
 body{
     width: 100%;
-    height: 100vh;
-    background: linear-gradient( to top right, rgba(255,107,161,255), white );
+    background: linear-gradient( to top right, rgba(255,107,161,255), #ffffff );
 }
 
 h1{
     width: 100%;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
-    font-family: mukta;
+    font-size: 5rem;
+    font-family: Mukta;
     text-shadow: rgba(70, 69, 69, 0.296) 6px 6px 8px;
-
+    margin-right: 70px;
     color: rgb(208, 20, 114);
 }
 
 header{
-    width: px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
 #logo{
     width: 200px;
+    margin-left: 70px;
 }
 
 .barradebusqueda{
     padding: 1.3em 3em;
     font-size: 15px;
-    margin: 5px;
+    margin: 2px;
     text-transform: uppercase;
     letter-spacing: 2.5px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-2);
     background-color: rgb(252, 206, 222);
     border: none;
@@ -92,8 +93,9 @@ header{
 h2
 {margin: 20px;
         font-size: 1.5rem;
-        font-style: italic;
+        font-style: mukta;
         color: var(--color-2);
+        font-weight: 900;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -103,11 +105,23 @@ text-align: center;
     #parrafo1 {
         margin: 40px 20px;
         width: auto;
-        font-weight: bolder;
         font-family: Mukta;
         color: rgb(43, 38, 38);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         justify-content: space-evenly;
+        justify-items: right;
+        font-size: 1.3rem;
+        }
+
+    #divcenter {
+        text-align: center;
+    }
+
+    #div1{ 
+        grid-area: a
     }
 
 .boton {
@@ -115,8 +129,8 @@ text-align: center;
     font-size: 15px;
     margin: 28px;
     text-transform: uppercase;
-    letter-spacing: 2.5px;
-    font-weight: 500;
+    letter-spacing: 2.2px;
+    font-weight: 900;
     color: var(--color-2);
     background-color: rgb(252, 206, 222);
     border: none;
@@ -125,7 +139,8 @@ text-align: center;
     transition: all0.3s ease 0s;
     cursor: pointer;
     outline: none; 
-}
+    justify-items: right;
+    align-items: center;}
 
 
 #bt1:hover {
@@ -137,12 +152,13 @@ text-align: center;
 }
 
 #cakerosa img{
-    width: 350px;
+    width: 300px;
 
 }
 
 #cakerosa {
     display: flex;
+    flex-direction: column; 
     align-items: center;
     justify-content: right;
 }
@@ -151,8 +167,9 @@ main{
     width: 100%;
     height: 100%;
     display: grid;
-grid-template-columns: repeat(2,1fr);
-grid-template-rows: repeat(3,1fr);
+grid-template-columns: repeat(3,1fr);
+grid-template-areas:
+"a a b";
 padding: 5px;
 gap: 5px;
 }
